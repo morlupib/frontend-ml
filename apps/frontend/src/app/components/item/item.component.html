@@ -1,5 +1,4 @@
-<div class="row no-gutters bg-white border-bottom cursor-pointer py-16"
-  [routerLink]="['/items', item.id]">
+<div class="row no-gutters bg-white border-bottom cursor-pointer py-16" [routerLink]="['/items', item.id]">
   <div class="col-auto px-16">
     <img class="picture-size" [src]="item.picture" alt="{{item.title}}">
   </div>
@@ -8,9 +7,7 @@
       <div class="col-auto font-size3">
         {{ item.price.amount | currency:'$' }}
       </div>
-      <img class="my-auto" 
-        *ngIf="item.free_shipping" 
-        src="assets/img/ic_shipping.png">
+      <img class="my-auto" *ngIf="item.free_shipping" src="assets/img/ic_shipping.png">
       <div class="col-auto my-auto ml-auto mr-5 font-size7 text-secondary">
         {{item.state_name}}
       </div>

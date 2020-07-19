@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService } from '../../services/item/item.service';
-import { IItem } from '../../interfaces/ISearchResult';
+import { IItem } from '../../interfaces/search-result.interface';
 import { Title } from '@angular/platform-browser';
 import { first } from 'rxjs/operators';
 
@@ -20,7 +20,7 @@ export class ItemDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.title.setTitle('Detalle producto');
+    this.title.setTitle('Detalle del producto');
     const id = this.route.snapshot.params.id;
     this.getItem(id);
   }
@@ -31,5 +31,9 @@ export class ItemDetailComponent implements OnInit {
         (res: any) => this.item = res.item, 
         err => console.error(err)
       );
+  }
+
+  getCondition(condition: string) {
+    return condition === 'new' ? 'Nuevo' : 'Usado';
   }
 }

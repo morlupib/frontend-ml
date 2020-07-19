@@ -1,12 +1,19 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { ItemService } from './item.service';
 
 describe('ItemService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [ HttpClientTestingModule ],
+      providers: [ ItemService ]
+    })
+    .compileComponents();
+  }));
 
   it('should be created', () => {
-    const service: ItemService = TestBed.get(ItemService);
+    const service: ItemService = TestBed.inject(ItemService);
     expect(service).toBeTruthy();
   });
 });

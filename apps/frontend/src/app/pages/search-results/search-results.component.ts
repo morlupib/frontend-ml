@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService } from '../../services/item/item.service';
-import { ISearchResult } from '../../interfaces/ISearchResult';
+import { ISearchResult } from '../../interfaces/search-result.interface';
 import { Title } from '@angular/platform-browser';
 import { first } from 'rxjs/operators';
 

@@ -25,29 +25,52 @@ h4 {
     padding-top: 16px !important;
     padding-bottom: 16px !important;
 }
-
 .px-16 {
     padding-left: 16px !important;
     padding-right: 16px !important;
 }
-
 .pt-16 {
     padding-top: 16px !important;
 }
-
 .pr-16 {
     padding-right: 16px !important;
 }
-
 .pr-32 {
     padding-right: 32px !important;
 }
-
 .pt-32 {
     padding-top: 32px !important;
 }
-
+.pb-32 {
+    padding-bottom: 32px !important;
+}
 .py-32 {
     padding-top: 32px !important;
     padding-bottom: 32px !important;
+}
+.px-32 {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+}
+
+.search-results {
+    @extend .row !optional;
+    @extend .no-gutters !optional;
+    @extend .justify-content-center !optional;
+    @extend .mb-4 !optional;
+}
+
+.item-detail {
+    @extend .row !optional;
+    @extend .no-gutters !optional;
+    @extend .justify-content-center !optional;
+    @extend .mb-5 !optional;
+}
+
+.header-component {
+    @extend .navbar !optional;
+    @extend .bg-primary !optional;
+    @extend .justify-content-center !optional;
+    @extend .sticky-top !optional;
+    @extend .no-gutters !optional;
 }

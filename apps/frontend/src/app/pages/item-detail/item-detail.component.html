@@ -1,25 +1,25 @@
-<div *ngIf="item" class="row no-gutters justify-content-center mb-5">
+<div *ngIf="item" class="item-detail">
   <div class="col-10 py-16">
     <app-category [categories]="itemService.getCategories()"></app-category>
   </div>
   <div class="col-10 px-0 bg-white">
-    <div class="row mx-0">
+    <div class="row mx-0 pb-32 pr-32">
       <div class="col-md-12 col-lg-8">
         <div class="d-flex mx-auto picture-size">
           <img class="d-block m-auto" [src]="item.picture">
         </div>
       </div>
-      <div class="col-md-6 col-lg-4">
-        <p class="text-info pt-32 font-size6">
-          {{ item.condition == 'new' ? 'Nuevo' : 'Usado' }} - {{ item.sold_quantity }} vendidos
-        </p>
-        <p class="text-dark font-weight-bold pt-16 font-size3">
+      <div class="col-md-12 col-lg-4">
+        <label class="text-info pt-32 font-size6">
+          {{ getCondition(item.condition) }} - {{ item.sold_quantity }} vendidos
+        </label>
+        <label class="text-dark font-weight-bold pt-16 font-size3">
           {{ item.title }}
-        </p>
-        <p class="text-dark font-weight-bold pt-32 font-size1">
+        </label>
+        <label class="text-dark font-weight-bold pt-32 font-size1">
           {{ item.price.amount | currency:'$' }}
-        </p>
-        <div class="pt-32 pr-32">
+        </label>
+        <div class="pt-32">
           <button class="btn btn-block btn-success">
             Comprar
           </button>
@@ -27,10 +27,10 @@
       </div>
     </div>
     <div class="row mx-0">
-      <div class="col-md-12 col-lg-8 pt-32 pr-32 pl-lg">
-        <p class="text-dark font-size2">
+      <div class="col-md-12 col-lg-8 px-32">
+        <h5 class="text-dark font-size2">
           Descripción del producto
-        </p>
+        </h5>
         <p class="font-size5 py-32 text-secondary">
           {{ item.description }}
         </p>
