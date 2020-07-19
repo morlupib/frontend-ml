@@ -5,6 +5,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ItemDetailComponent } from './item-detail.component';
 import { CategoryComponent } from '../../components/category/category.component';
 import { ItemService } from '../../services/item/item.service';
+import { LoaderComponent } from '../../components/loader/loader.component';
 
 describe('ItemDetailComponent', () => {
   let component: ItemDetailComponent;
@@ -12,11 +13,10 @@ describe('ItemDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ RouterTestingModule, HttpClientTestingModule ],
-      declarations: [ ItemDetailComponent, CategoryComponent ],
-      providers: [ ItemService ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule, HttpClientTestingModule],
+      declarations: [ItemDetailComponent, CategoryComponent, LoaderComponent],
+      providers: [ItemService],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

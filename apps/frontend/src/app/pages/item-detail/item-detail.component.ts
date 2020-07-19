@@ -8,28 +8,33 @@ import { first } from 'rxjs/operators';
 @Component({
   selector: 'app-item-detail',
   templateUrl: './item-detail.component.html',
-  styleUrls: ['./item-detail.component.scss']
+  styleUrls: ['./item-detail.component.scss'],
 })
 export class ItemDetailComponent implements OnInit {
   item: IItem;
+  isLoading: boolean;
 
   constructor(
     private route: ActivatedRoute,
     public itemService: ItemService,
     private title: Title
-  ) { }
+  ) {}
 
   ngOnInit() {
+    this.isLoading = true;
     this.title.setTitle('Detalle del producto');
     const id = this.route.snapshot.params.id;
     this.getItem(id);
   }
 
   getItem(id: string) {
-    this.itemService.getItem(id).pipe(first())
+    this.itemService
+      .getItem(id)
+      .pipe(first())
       .subscribe(
-        (res: any) => this.item = res.item, 
-        err => console.error(err)
+        (res: any) => (this.item = res.item),
+        (err) => console.error(err),
+        () => (this.isLoading = false)
       );
   }
 

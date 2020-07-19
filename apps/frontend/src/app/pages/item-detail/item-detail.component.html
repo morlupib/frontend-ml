@@ -6,7 +6,7 @@
     <div class="row mx-0 pb-32 pr-32">
       <div class="col-md-12 col-lg-8">
         <div class="d-flex mx-auto picture-size">
-          <img class="d-block m-auto" [src]="item.picture">
+          <img class="d-block m-auto" [src]="item.picture" />
         </div>
       </div>
       <div class="col-md-12 col-lg-4">
@@ -17,7 +17,7 @@
           {{ item.title }}
         </label>
         <label class="text-dark font-weight-bold pt-32 font-size1">
-          {{ item.price.amount | currency:'$' }}
+          {{ item.price.amount | currency: '$' }}
         </label>
         <div class="pt-32">
           <button class="btn btn-block btn-success">
@@ -39,6 +39,8 @@
   </div>
 </div>
 
-<div *ngIf="!item">
+<app-loader *ngIf="isLoading"></app-loader>
+
+<div *ngIf="!item && !isLoading">
   <h4>No se encontraron resultados</h4>
 </div>
