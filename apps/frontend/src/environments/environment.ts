@@ -4,6 +4,9 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'http://localhost:8080/api',
+  baseUrl: 'https://api.mercadolibre.com/',
+  searchEndpoint: 'sites/MLA/'
 };
 
 /*

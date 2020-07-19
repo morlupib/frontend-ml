@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "./assets/styles/colors.scss";
+@import "./assets/styles/font-size.scss";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background-color: $light;
+    font-family: Arial;
+}
+
+h4 {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.py-16 {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.px-16 {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+}
+
+.pt-16 {
+    padding-top: 16px !important;
+}
+
+.pr-16 {
+    padding-right: 16px !important;
+}
+
+.pr-32 {
+    padding-right: 32px !important;
+}
+
+.pt-32 {
+    padding-top: 32px !important;
+}
+
+.py-32 {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+}

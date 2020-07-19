@@ -1,0 +1,31 @@
+@import "../../../assets/styles/font-size.scss";
+@import "../../../assets/styles/colors.scss";
+
+:host {
+    nav {
+        height: 55px;
+    }
+
+    .btn-search {
+        height: 35px;
+        border-radius: 1px;
+    }
+
+    .search-box {
+        height: 35px;
+        border: none;
+        border-radius: 1px;
+        &::placeholder,
+        &::-webkit-input-placeholder,
+        &:-ms-input-placeholder {
+            color: $secondary;
+            font-size: $font-size4;
+        }
+    }
+
+    img, input:focus, button:focus {  
+        border-color: none;
+        box-shadow: none;
+        outline: none;
+    }
+}

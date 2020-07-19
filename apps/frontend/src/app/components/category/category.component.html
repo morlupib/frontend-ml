@@ -1,0 +1,8 @@
+<div class="py-16">
+  <span class="text-secondary font-size7" 
+    [ngClass]="{'font-weight-bold': isLast(i)}"
+    *ngFor="let category of categories; let i = index;">
+    {{ category }}
+    <span [hidden]="isLast(i)">></span>
+  </span>
+</div>
